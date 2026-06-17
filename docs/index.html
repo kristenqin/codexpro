@@ -117,7 +117,7 @@ codexpro setup</code>
             Codex and ChatGPT are different product surfaces. If one workflow is unavailable and another surface you already have access to is still available, CodexPro lets you work against the same local repo without changing either product's limits.
           </p>
           <p>
-            If your ChatGPT account exposes a stronger model in the web app, CodexPro lets that model work against your local repo through MCP. It does not provide, proxy, resell, or unlock models; it gives your ChatGPT session local coding tools and repo context.
+            If your ChatGPT account exposes a stronger model in the web app, and that model surface can call Developer Mode apps, CodexPro lets it work against your local repo through MCP. Some model surfaces cannot call connectors or MCP tools directly. CodexPro does not provide, proxy, resell, or unlock models; it gives compatible ChatGPT sessions local coding tools and repo context.
           </p>
         </div>
         <div class="value-matrix">
@@ -319,7 +319,7 @@ cloudflared tunnel route dns codexpro codexpro.example.com</code></pre>
           </div>
           <div>
             <strong>Pro planning</strong>
-            <p>Exports a durable context file for models or surfaces that cannot call MCP tools.</p>
+            <p>Exports a durable context file for models or surfaces that cannot call connectors or MCP tools directly.</p>
           </div>
         </div>
       </section>
@@ -474,7 +474,7 @@ codexpro settings delete --yes</code></pre>
         <div class="faq-grid">
           <article>
             <h3>Which ChatGPT account should I use?</h3>
-            <p>Use ChatGPT Plus or Pro with Apps / Developer Mode access. Current testing shows free and Go accounts do not expose the app flow needed for CodexPro.</p>
+            <p>Use ChatGPT Plus or Pro with Apps / Developer Mode access. Current testing shows free and Go accounts do not expose the app flow needed for CodexPro. A specific model surface may still be unable to call connectors; use Pro context fallback for those sessions.</p>
           </article>
           <article>
             <h3>Does CodexPro bypass rate limits?</h3>

@@ -71,7 +71,7 @@ Pro planning mode   Export a durable context bundle for sessions that cannot cal
 Stable URLs         Use an ngrok free dev domain or Cloudflare named tunnel so the ChatGPT app URL stays fixed.
 ```
 
-If your ChatGPT account exposes a stronger model in the web app, CodexPro lets that model work against your local repo through MCP. CodexPro does not provide, proxy, resell, or unlock models; it gives the ChatGPT session local coding tools and repo context.
+If your ChatGPT account exposes a stronger model in the web app, and that model/surface can call Developer Mode apps, CodexPro lets it work against your local repo through MCP. Some ChatGPT model surfaces may not be able to call connectors or MCP tools directly. CodexPro does not provide, proxy, resell, or unlock models; it gives compatible ChatGPT sessions local coding tools and repo context.
 
 CodexPro is not an OS sandbox. It is a local developer bridge with safety defaults. Read [SECURITY.md](SECURITY.md) before exposing it through a tunnel.
 
@@ -86,6 +86,8 @@ One public tunnel option: Cloudflare quick tunnel, ngrok free dev domain, or Clo
 ```
 
 Current testing shows free / Go ChatGPT accounts do not expose the app flow needed for CodexPro. Use Plus or Pro for the best experience.
+
+Account tier and model tool support are separate things. Plus/Pro can expose Apps / Developer Mode, but a specific model surface may still be unable to call the connector. Use Pro context fallback for those sessions.
 
 ## Status
 
@@ -642,7 +644,7 @@ http://127.0.0.1:8787/mcp
 
 ## Pro context fallback
 
-Some ChatGPT models may not be able to call Developer Mode apps/MCP tools in a given product surface. When that happens, use a durable context bundle instead of fighting the tool boundary.
+Some ChatGPT models or product surfaces may not be able to call Developer Mode apps, connectors, or MCP tools directly. This can include stronger planning-model surfaces even when the same ChatGPT account can create and use the CodexPro app from other chats. When that happens, use a durable context bundle instead of fighting the tool boundary.
 
 Generate a bundle:
 
