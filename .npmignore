@@ -1,5 +1,28 @@
+# Source code and build artifacts
+src/
+tsconfig.json
+*.ts
+dist/
+.github/
+scripts/
+docs/
+config/
+
+# Git and development files
+.git
+.gitignore
+
+# Dot files
+.npmrc
+.eslintrc*
+.prettierrc*
+.editorconfig
+
+# Development dependencies
 node_modules/
-.DS_Store
-.env
-.env.*
-*.tgz
+package-lock.json
+*.test.js
+jest.config.js
+
+# Root documentation (moved to docs/)
+# These are kept in the package for reference only
